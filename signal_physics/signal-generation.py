@@ -25,11 +25,6 @@ tx_signal = np.cos(2 * np.pi * ((FC * t) + ((B * t**2) / (2 * TC))))
 
 
 # ============= received signal =============
-B = config.B
-TC = config.TC
-FC = config.FC
-FS = config.FS
-N_SAMPLES = config.N_SAMPLES
 c = config.C
 
 target_dist = 150     # Target is 30 meters away
@@ -63,6 +58,7 @@ ax2.set_title("Spectrogram (Frequency vs. Time)")
 ax2.specgram(tx_signal, Fs=FS, cmap='inferno')
 ax2.set_xlabel("Time (s)")
 ax2.set_ylabel("Frequency (Hz)")
+plt.tight_layout()
 
 
 
@@ -85,7 +81,7 @@ ax2.set_title("Spectrogram (Frequency vs. Time)")
 ax2.specgram(rx_signal, Fs=FS, cmap='inferno')
 ax2.set_xlabel("Time (s)")
 ax2.set_ylabel("Frequency (Hz)")
-
+plt.tight_layout()
 
 
 # ============= 2 signal comparison plotting =============
