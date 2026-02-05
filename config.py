@@ -1,7 +1,6 @@
 from logging import Handler
 from Json_Handler import save_to_json
 import numpy as np
-
 # --- Radar Hardware & Waveform ---
 C = 3e8                      # Speed of light (m/s)
 FC = 10e9                    # 10 GHz (X-band)
