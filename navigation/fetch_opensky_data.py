@@ -83,3 +83,5 @@ if __name__ == "__main__":
             print(f"  ID: {flight[0]} | Flight: {callsign:10} | Country: {flight[2]:20} | Alt: {flight[7]}m")
     else:
         print("Failed to fetch data. Check your internet connection or API limits.")
+
+        # form omar
