@@ -71,7 +71,7 @@ if __name__ == "__main__":
                 file_size = os.path.getsize(output_file)
                 print(f"[OK] File exists! Size: {file_size:,} bytes")
             else:
-                print("[ERROR] File was not created!")
+                 print("[ERROR] File was not created!")
                 
         except Exception as e:
             print(f"[ERROR] Failed to save file: {e}")
