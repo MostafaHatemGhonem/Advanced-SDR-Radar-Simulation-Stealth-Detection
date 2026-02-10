@@ -1,4 +1,9 @@
-Data={
+from fastapi import FastAPI
+
+app = FastAPI()
+
+ 
+Data ={
   "status": "success",
   "radar_center": {"lat": 30.0444, "lon": 31.2357},
   "targets": [
@@ -20,27 +25,11 @@ Data={
     }
   ]
 }
-#كأنها الداتا اللي هتيجي من عمر
 
 def get_data():
     return Data
-  
-def filtered_targets(Data) :
-    filtered=[]
 
 
-    for t in Data["targets"]:
-        if t["altitude_m"] > 0 and t["distance_km"] <= 150:
-            filtered.append(t)
-
-    return {"targets": filtered} 
-
-#مثال لكود سها
-
-from fastapi import FastAPI
-app=FastAPI() 
-@app.get("/radar") 
+@app.get("/radar")
 def radar():
-   data=get_data()
-   result=filtered_targets(data)
-   return result
+    return get_data()
